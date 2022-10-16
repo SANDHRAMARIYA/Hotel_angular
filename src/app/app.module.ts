@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { RoomComponent } from './room/room.component';
 
-const approutes:Routes=[
+const appRoutes:Routes=[
   {
     path:"",component:HomeComponent
+  },
+  {
+    path:"room",component:RoomComponent
   }
 ]
 
@@ -17,12 +21,13 @@ const approutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(approutes)
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
